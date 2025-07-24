@@ -1,4 +1,4 @@
-import { Dimensions, StyleSheet } from "react-native";
+import { StyleSheet, Dimensions } from "react-native";
 
 // Constants for reusable values
 const COLORS = {
