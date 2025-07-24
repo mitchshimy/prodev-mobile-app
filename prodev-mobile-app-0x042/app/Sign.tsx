@@ -5,7 +5,7 @@ import { useRouter } from "expo-router";
 import { Image, Text, TextInput, TouchableOpacity, View } from "react-native";
 import { SafeAreaProvider, SafeAreaView } from "react-native-safe-area-context";
 
-export default function Join() {
+export default function SignIn() {
   const router = useRouter();
 
   return (
@@ -16,8 +16,8 @@ export default function Join() {
         </View>
 
         <View style={styles.titleTextGroup}>
-          <Text style={styles.titleText}>Join Now</Text>
-          <Text style={styles.subText}>Create your account below</Text>
+          <Text style={styles.titleText}>Sign In</Text>
+          <Text style={styles.subText}>Enter your email and password to sign in</Text>
         </View>
 
         <View style={styles.formGroup}>
@@ -32,11 +32,12 @@ export default function Join() {
               <TextInput style={styles.passwordControl} placeholder="Enter password" secureTextEntry />
               <FontAwesome name="eye-slash" size={24} color="#7E7B7B" />
             </View>
+            <Text style={styles.forgotPasswordText}>Forgot password?</Text>
           </View>
         </View>
 
         <TouchableOpacity style={styles.primaryButton}>
-          <Text style={styles.buttonText}>Create Account</Text>
+          <Text style={styles.buttonText}>Sign In</Text>
         </TouchableOpacity>
 
         <View style={styles.dividerGroup}>
@@ -48,19 +49,19 @@ export default function Join() {
         <View style={styles.secondaryButtonGroup}>
           <TouchableOpacity style={styles.secondaryButton}>
             <Image source={GOOGLELOGO} />
-            <Text style={styles.secondaryButtonText}>Sign Up with Google</Text>
+            <Text style={styles.secondaryButtonText}>Continue with Google</Text>
           </TouchableOpacity>
 
           <TouchableOpacity style={styles.secondaryButton}>
             <Image source={FACEBOOKLOGO} />
-            <Text style={styles.secondaryButtonText}>Sign Up with Facebook</Text>
+            <Text style={styles.secondaryButtonText}>Continue with Facebook</Text>
           </TouchableOpacity>
         </View>
 
         <View style={styles.signupgroup}>
-          <Text style={styles.signupTitleText}>Already have an account? </Text>
-          <TouchableOpacity onPress={() => router.push("/signin")}>
-            <Text style={styles.signupSubTitleText}>Sign In</Text>
+          <Text style={styles.signupTitleText}>Don't have an account? </Text>
+          <TouchableOpacity onPress={() => router.push("/join")}>
+            <Text style={styles.signupSubTitleText}>Join now</Text>
           </TouchableOpacity>
         </View>
       </SafeAreaView>
